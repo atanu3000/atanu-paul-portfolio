@@ -1,0 +1,155 @@
+#about {
+    justify-content: center;
+}
+
+#about .content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: rgba(11, 11, 11, 0.5); */
+    background: linear-gradient(135deg, rgb(138, 43, 226, 0.5), rgba(0, 153, 255, 0.5));
+    width: 98%;
+    /* top: calc(100vh - 96%); */
+    top: 3em;
+    height: 85vh;
+    border-radius: 5px;
+}
+
+#about .box {
+    position: absolute;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+#about .box .card {
+    position: relative;
+    background: rgba(255,255,255,0.3);
+    width: 350px;
+    min-height: 480px;
+    backdrop-filter: blur(10px);
+    border-top: 2px solid rgba(255,255,255,0.75);
+    border-left: 2px solid rgba(255,255,255,0.75);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+    transform-style: preserve-3d;
+}
+
+#about .elements {
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.1);
+    transform: translateZ(80px);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.5);
+    border-top: 2px solid rgba(255,255,255,0.75);
+    border-left: 2px solid rgba(255,255,255,0.75);
+    border-radius: 10px;
+    box-shadow: 0 5px 45px rgba(0,0,0,0.5);
+}
+
+.elements.bg::before {
+    content: '';
+    position: absolute;
+    inset: 0px;
+    background: url(../asset/left-quote.png);
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: 0; */
+    transition: 0.5s;
+}
+
+/* .box:hover .elements.bg::before {
+    opacity: 1;
+} */
+
+#about .elements.imgBx {
+    top: 10px;
+    left: initial;
+    right: 60px;
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+    transform: translateZ(120px);
+}
+
+.elements.imgBx img {
+    position: absolute;
+    width: calc(100% - 20px);
+    border-radius: 8px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-top: 2px solid rgba(255,255,255,0.75);
+    border-left: 2px solid rgba(255,255,255,0.75);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.box:hover .elements.imgBx img {
+    opacity: 1;
+}
+
+#about .elements.name {
+    top: 235px;
+    left: initial;
+    right: 10px;
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    text-align: right;
+    transform: translateZ(150px);
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border: none;
+    box-shadow: none;
+    color: #644651;
+    letter-spacing: 0.3em;
+    font-size: 1.2em;
+    opacity: 0;
+    transform: 1s ;
+    transition-delay: 0.25s;
+}
+
+#about .box:hover .elements.name{
+    top: 170px;
+    opacity: 1;
+}
+
+#about .elements.content {
+    top: initial;
+    left: initial;
+    bottom: 20px;
+    right: -40px;
+    width: 95%;
+    height: 180px;
+    transform: translateZ(180px);
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.elements.content p {
+    position: relative;
+    color: #644651;
+    font-size: 0.85em;
+    opacity: 0;
+    transform: 1s;
+    transition-delay: 0.2s;
+    line-height: 2em;
+}
+
+#about .box:hover .elements.content p{
+    opacity: 1;
+}
+
+body.night #about .elements.name, 
+body.night #about .elements.content p {
+    color: #fff;
+    text-shadow: 5px 5px  15px rgba(0,0,0);
+}

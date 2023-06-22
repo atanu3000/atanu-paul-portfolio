@@ -1,0 +1,140 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 7px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(216, 214, 214, 0.5);
+    z-index: 1;
+    backdrop-filter: blur(15px);
+}
+
+header .logo {
+    position: relative;
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    color: #000;
+}
+
+header .logo span {
+    color: #2196f3;
+}
+header .nav {
+    display: flex;
+}
+header .nav ul {
+    position: relative;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+header .nav ul li {
+    list-style: none;
+    text-transform: capitalize;
+    font-size: 1.1em;
+}
+
+header .nav ul li.active a,
+header .nav ul li:hover a {
+    color: #2196f3;
+}
+
+header .nav ul li a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+header .nav .profile {
+    display: none;
+}
+
+header .menu-bar {
+    display: none;
+    font-size: 1.8em;
+    align-items: center;
+}
+
+header .nav-drop {
+    display: none;
+    /* justify-content: center; */
+    position: absolute;
+    top: calc(100%);
+    right: 0;
+    width: 85%;
+    height: 100vh;
+    background: #f0f0f0;
+}
+
+header .nav-drop ul {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    position: absolute;
+    top: 20px;
+    align-items: center;
+    width: 100%;
+
+    gap: 20px;
+}
+
+header .nav-drop ul li:nth-child(1) {
+    padding: 50px 30px;
+    border-bottom: 1px solid #ccc;
+    flex-direction: row-reverse;
+}
+
+header .nav-drop ul li {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    width: 100%;
+    padding: 0 30px;
+}
+
+header .nav-drop .dayNight {
+    background: #bbb;
+}
+
+header .nav-drop .profile {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+header .nav-drop .profile img {
+    width: 100%;
+}
+
+header .nav-drop ul li a {
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #000;
+    font-weight: 600;
+}
+
+header .nav-drop ul li.active a,
+header .nav-drop ul li:hover a {
+    color: #2196f3;
+}
+
+@media only screen and (max-width: 750px) {
+    header .nav {
+        display: none;
+    }
+    header .menu-bar {
+        display: flex;
+    }
+}

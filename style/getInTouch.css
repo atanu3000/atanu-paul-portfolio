@@ -1,0 +1,140 @@
+
+:root {
+    --clr: #0ab3ff;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    /* background: rgba(11, 11, 11, 0.5); */
+    background: linear-gradient(135deg, rgb(138, 43, 226, 0.5), rgba(0, 64, 255, 0.5));
+    width: 98%;
+    height: 98vh;
+    border-radius: 5px;
+}
+
+form {
+    background: rgba(255,255,255,0.5);
+    padding: 60px 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;   
+}
+
+form h2 {
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 1.25em;
+    letter-spacing: 0.1em;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px  5px rgba(0,0,0);
+}
+
+.inputBox {
+    position: relative;
+    width: 300px;
+    margin-bottom: 30px;
+}
+
+.inputBox input {
+    position: relative;
+    width: 100%;
+    padding: 10px 0;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    color: #000;
+    font-size: 1.2em;
+    letter-spacing: 0.15em;
+}
+
+.inputBox label {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    pointer-events: none;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.inputBox label span {
+    position: relative;
+    display: inline-flex;
+    letter-spacing: 0.1em;
+    transition: 0.2s ease-in-out;
+}
+.inputBox input:focus ~ label span,
+.inputBox input:valid ~ label span{
+    color: var(--clr);
+    letter-spacing: 0.15em;
+    transform: translateY(-25px);
+}
+
+
+.inputBox input:focus,
+.inputBox input:valid {
+    border-bottom: 2px solid var(--clr);
+}
+
+.inputBox input[type="submit"] {
+    background: var(--clr);
+    border-radius: 50px;
+    padding: 15px;
+    color: #1c2630;
+    font-weight: 600;
+    font-size: 1.15em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.455);
+}
+
+.inputBox input[type="submit"]:hover {
+    letter-spacing: 0.35em;
+}
+
+form p {
+    color: #fff;
+    text-transform: capitalize;
+    letter-spacing: 0.1em;
+    text-shadow: 0.5px 0.5px  2px rgba(0,0,0);
+}
+
+form p a {
+    text-decoration: none;
+    color: var(--clr);
+    font-weight: 600;
+    padding-left: 10px;
+}
+
+body.night .inputBox label {
+    color: #fff;
+}
+
+body.night .inputBox input:focus ~ label span,
+body.night .inputBox input:valid ~ label span {
+    color: #0f3ffe;
+}
+
+body.night .inputBox input:focus {
+    border-bottom: 2px solid #0f3ffe;
+}
+
+body.night .inputBox input {
+    color: #fff;
+}

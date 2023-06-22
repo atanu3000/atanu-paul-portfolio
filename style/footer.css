@@ -1,0 +1,112 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+footer .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3em;
+    padding: 2em;
+    color: #555;
+}
+
+footer .content h2 {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    font-weight: 600;
+}
+
+footer .content h2::after {
+    position: relative;
+    content: '';
+    bottom: 0;
+    width: 3em;
+    height: 0.13em;
+    border-radius: 3em;
+    background: #ff0000;
+}
+
+footer .content .about_us,
+footer .content .quick_links,
+footer .content .contact_us {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+footer .content .about_us .icon {
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(42px, 1fr));
+    gap: 20px;
+}
+
+footer .content .about_us .icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    color: #555;
+    padding: 0.3em ;
+    background: #eee;
+    box-shadow: 2px 2px 10px #ccc;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+
+footer .content .about_us .icon a:nth-child(1):hover {
+    background: rgb(62, 94, 254);
+    color: #fff;
+}
+
+footer .content .about_us .icon a:nth-child(2):hover {
+    background: rgb(69, 140, 255);
+    color: #fff;
+}
+
+footer .content .about_us .icon a:nth-child(3):hover {
+    background: rgb(0,0,0);
+    color: #fff;
+}
+footer .content .about_us .icon a:nth-child(4):hover {
+    background: rgb(61, 127, 233);
+    color: #fff;
+}
+
+footer .content .about_us .icon a:nth-child(5):hover {
+    background: linear-gradient(190deg, #6200ff, #ff0088, #ff0000, #ffff00);
+    color: #fff;
+}
+
+footer .content .quick_links li {
+    list-style: none;
+    padding-bottom: 20px;
+
+}
+
+footer .content .quick_links li a {
+    text-decoration: none;
+    color: #555;
+    text-transform: capitalize;
+}
+
+footer .content .contact_us p {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+}
+
+footer .content .contact_us p span {
+    display: flex;
+    align-items: center;
+    font-size: 2em;
+    padding-right: 0.5em;
+}
+
+footer .foot{
+    margin: 1em 0;
+    text-align: center;
+}
