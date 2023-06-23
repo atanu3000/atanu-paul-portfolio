@@ -138,3 +138,16 @@ header .nav-drop ul li:hover a {
         display: flex;
     }
 }
+
+body.night header .nav-drop {
+    background: #444;
+}
+
+body.night header .nav-drop ul li a {
+    color: #ddd;
+}
+
+body.night header .nav-drop ul li.active a,
+body.night header .nav-drop ul li:hover a {
+    color: #2196f3;
+}

@@ -2,6 +2,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 1em;
+    background: #eee;
 }
 
 footer .content {
@@ -9,7 +10,9 @@ footer .content {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 3em;
     padding: 2em;
+    padding-bottom: 1em;
     color: #555;
+    transition: 0.5s;
 }
 
 footer .content h2 {
@@ -29,54 +32,61 @@ footer .content h2::after {
     background: #ff0000;
 }
 
-footer .content .about_us,
+footer .content .about,
 footer .content .quick_links,
-footer .content .contact_us {
+footer .content .contact {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-footer .content .about_us .icon {
+footer .content .about p {
+    line-height: 2em;
+    letter-spacing: 0.07em;
+}
+
+footer .content .about .icon {
     /* display: flex; */
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(42px, 1fr));
     gap: 20px;
 }
 
-footer .content .about_us .icon a {
+footer .content .about .icon a {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2em;
+    max-width: 2em;
+    max-height: 2em;
     color: #555;
-    padding: 0.3em ;
-    background: #eee;
-    box-shadow: 2px 2px 10px #ccc;
+    padding: 0.3em;
+    background: #ddd;
+    box-shadow: 5px 5px 10px #a1a1a1;
     transition: 0.5s;
     border-radius: 5px;
 }
 
-footer .content .about_us .icon a:nth-child(1):hover {
+footer .content .about .icon a:nth-child(1):hover {
     background: rgb(62, 94, 254);
     color: #fff;
 }
 
-footer .content .about_us .icon a:nth-child(2):hover {
+footer .content .about .icon a:nth-child(2):hover {
     background: rgb(69, 140, 255);
     color: #fff;
 }
 
-footer .content .about_us .icon a:nth-child(3):hover {
+footer .content .about .icon a:nth-child(3):hover {
     background: rgb(0,0,0);
     color: #fff;
 }
-footer .content .about_us .icon a:nth-child(4):hover {
+footer .content .about .icon a:nth-child(4):hover {
     background: rgb(61, 127, 233);
     color: #fff;
 }
 
-footer .content .about_us .icon a:nth-child(5):hover {
+footer .content .about .icon a:nth-child(5):hover {
     background: linear-gradient(190deg, #6200ff, #ff0088, #ff0000, #ffff00);
     color: #fff;
 }
@@ -90,23 +100,58 @@ footer .content .quick_links li {
 footer .content .quick_links li a {
     text-decoration: none;
     color: #555;
+    font-size: 1.2em;
     text-transform: capitalize;
 }
 
-footer .content .contact_us p {
+footer .content .contact p {
     display: flex;
     align-items: center;
     padding: 1em 0;
 }
 
-footer .content .contact_us p span {
+footer .content .contact p span {
     display: flex;
     align-items: center;
     font-size: 2em;
     padding-right: 0.5em;
 }
 
+footer  a.buymeacoffee {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+footer  a.buymeacoffee img{
+    width: 15em ;
+    height: 4.2em ;
+}
+
 footer .foot{
-    margin: 1em 0;
+    margin: 1em 0 2em 0;
+    padding: 0.5em;
+    text-transform: capitalize;
     text-align: center;
+}
+
+body.night footer {
+    background: #222;
+}
+
+body.night footer .content,
+body.night footer .quick_links li a {
+    color: #eee;
+}
+
+body.night footer .content h2,
+body.night footer .foot {
+    color: #ccc;
+}
+
+body.night footer .content .about .icon a {
+    background: #adacac7a;
+    color: #dfdede;
+    box-shadow: none;
 }
