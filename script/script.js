@@ -3,9 +3,7 @@ window.addEventListener('contextmenu', function (e) {
 }, false); // to prevent right click events on all over page.
 
 const menu_bar = document.querySelector('.menu-bar');
-// menu_bar.addEventListener('click', () => {
-//     // document.querySelector('.nav-drop').style.display = 'flex';
-// });
+const links = document.querySelectorAll('.sec');
 
 $(document).ready(() => {
     $(window).on("resize", () => {
@@ -17,16 +15,14 @@ $(document).ready(() => {
     $(".menu-bar").click(() => {
         $(".nav-drop").toggle();
     });
-    // $(".menu-bar").click(() => {
-    //     $(".nav").toggleClass(".nav-bar");
-    // });
-
+    $(".sec").click(() => {
+        $(".nav-drop").hide();
+    });
 });
 
-const links = document.querySelectorAll('.sec');
+
 links.forEach(function (link) {
     link.addEventListener('click', function () {
-        // link.classList.remove('active');
         links.forEach(function (link) {
             link.classList.remove('active');
         });
@@ -34,6 +30,32 @@ links.forEach(function (link) {
     });
 }); // by using the 'function' keyword for the event listener functions, 'this' will correctly refer to the element that triggered the event. Here '() =>' isn't works properly.
 
+// window.addEventListener('scroll', function() {
+//     console.log('Scroll event triggered');
+//     var sections = document.querySelectorAll('section');
+//     var navigationLinks = document.querySelectorAll('.nav a');
+
+//     sections.forEach(function(section) {
+//       var rect = section.getBoundingClientRect();
+//       if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+//         var sectionId = section.getAttribute('id');
+//         navigationLinks.forEach(function(link) {
+//             link.parentElement.classList.remove('active');
+//         });
+//         document.querySelector('.nav a[href="#' + sectionId + '"]').parentElement.classList.add('active');
+//       }
+//     });
+//   });
+  
+// $(window).scroll(function(){
+
+//     $('section').each(function() {
+//         if($(window).scrollTop() >= $(this).offset().top + $(this).height() || $(window).scrollTop() < $(this).offset().top)
+//             $(this).removeClass('active');
+//         else
+//             $(this).addClass('active');
+//     });
+// });
 
 const body = document.querySelector('body');
 const dayNight = document.querySelectorAll('.dayNight');

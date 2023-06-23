@@ -148,6 +148,32 @@
     opacity: 1;
 }
 
+@media only screen and (max-width: 650px) {
+    #about .content .card {
+        width: calc(100vw - 2em);
+    }
+    #about .content .elements.bg {
+        display: none;
+    }
+    #about .content .elements.imgBx {
+        top: 0px;
+        right: 28%;
+        width: 150px;
+        height: 150px;
+        opacity: 1;
+    }
+    #about .elements.name {
+        right: 60px;
+    }
+    #about .elements.content {
+        right: none;
+        left: 60px;
+        bottom: 0;
+        width: 70%;
+        opacity: 1;
+    }
+}
+
 body.night #about .elements.name, 
 body.night #about .elements.content p {
     color: #fff;
