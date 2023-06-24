@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;500;600&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -183,7 +183,7 @@ section {
 #home .content h2 {
     font-size: clamp(1em, 10vw, 4em);
     color: #333;
-    font-weight: 700;
+    font-weight: 600;
     transition: 0.5s;
 }
 

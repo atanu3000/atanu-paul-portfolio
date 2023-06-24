@@ -16,9 +16,29 @@
     padding-bottom: 5em;
 }
 
+#project .content h1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 1.8em;
+    letter-spacing: 0.1em;
+    color: #333;
+    font-family: 'Kanit', sans-serif;
+}
+
+#project .content h1::after {
+    position: relative;
+    content: '';
+    bottom: 0;
+    width: 3.5em;
+    height: 0.13em;
+    border-radius: 3em;
+    background: #ff0000;
+}
+
 #project .card-wrapper {
     position: relative;
-    top: 3.5em;
+    top: 3em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
@@ -128,4 +148,9 @@
 
 body.night #project {
     background: #333;
+}
+
+body.night #project .content h1 {
+    color: #fff;
+    text-shadow: 5px 5px  15px rgba(0,0,0);
 }
